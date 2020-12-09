@@ -8,8 +8,10 @@ package student;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.time.format.DateTimeParseException;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
+import jdk.jfr.Timespan;
 import main.DbHelper;
 
 /**
@@ -111,6 +113,7 @@ public class Return extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         btnReturn = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
+        jLabel14 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -302,6 +305,8 @@ public class Return extends javax.swing.JFrame {
             }
         });
 
+        jLabel14.setText("jLabel14");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -320,6 +325,8 @@ public class Return extends javax.swing.JFrame {
                                 .addGap(29, 29, 29)
                                 .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(50, 50, 50)
                                 .addComponent(btnReturn)
                                 .addGap(35, 35, 35)
                                 .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -338,7 +345,8 @@ public class Return extends javax.swing.JFrame {
                 .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnBack)
-                    .addComponent(btnReturn))
+                    .addComponent(btnReturn)
+                    .addComponent(jLabel14))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -405,6 +413,11 @@ public class Return extends javax.swing.JFrame {
     private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
         Delete();
         ReturnUpdate();
+        
+       //  Timespan fark;
+       // fark = jDateChooser1.get
+        
+        
     }//GEN-LAST:event_btnReturnActionPerformed
 
     /**
@@ -452,6 +465,7 @@ public class Return extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

@@ -1,6 +1,7 @@
-package student;
+package admin;
 
 
+import student.*;
 import main.DbHelper;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -18,14 +19,14 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author hasan
  */
-public class StudentBook extends javax.swing.JFrame {
+public class ListBooks extends javax.swing.JFrame {
 
     Connection connection;
     ResultSet resultSet;
     PreparedStatement preparedStatement;
 
-    public StudentBook() {
-        super("Student Book");
+    public ListBooks() {
+        super("List Books");
         initComponents();
         connection = DbHelper.ConnectDb();
     }
@@ -140,8 +141,8 @@ public class StudentBook extends javax.swing.JFrame {
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         setVisible(false);
-        StudentHome sHome = new StudentHome();
-        sHome.setVisible(true);
+        AdminHome aHome = new AdminHome();
+        aHome.setVisible(true);
     }//GEN-LAST:event_btnBackActionPerformed
 
     /**
@@ -161,20 +162,21 @@ public class StudentBook extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(StudentBook.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ListBooks.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(StudentBook.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ListBooks.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(StudentBook.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ListBooks.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(StudentBook.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ListBooks.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new StudentBook().setVisible(true);
+                new ListBooks().setVisible(true);
             }
         });
     }
